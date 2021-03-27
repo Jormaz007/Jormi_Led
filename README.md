@@ -1,34 +1,35 @@
-	Jormi_Led.h		Librería de manejo de leds
-		v0.3	20210129	Multitask	
+	Jormi_Led.h		
+	Librería de manejo de leds
+	v0.3	20210129	Multitask	
 
 
-	Constructor, inicio con led apagado
-	Jormi_Led(byte pin);
+	Jormi_Led(byte pin)
+		Constructor, inicio con led apagado
+	
+
+	void enciende()
+		Enciende el led (valor = HIGH)
+	
+	
+	void apaga()
+		Apaga el led (valor = LOW)
+	
+
+	byte conectado()
+		Devuelve el numero de pin donde esta el led (objeto)
+		return
+			byte pin
+	
+	void parpadeo( unsigned long periodo )
+		Parpadeo
+		periodo = 0, el led deja de parpadear
+		periodo != 0, periodo en milisegundos
 
 
-	Enciende - Enciende el led (valor = HIGH)
-	void enciende();
+	void update()
+		Update del loop
 
 
-	Apaga - Apaga el led (valor = LOW)
-	void apaga();
-
-
-	Conectado - Devuelve el numero de pin donde esta el led (objeto)
-	return
-		byte pin
-	byte conectado();
-
-
-	Parpadeo
-		_parpadeo = 0, el led deja de parpadear
-		_parpadeo != 0, periodo en milisegundos
-	void parpadeo( unsigned long periodo );
-
-
-	Update
-	void update();
-
-
-	Información - Muestra en ventana de depuración info de las variables
-	void informacion();
+	void informacion()
+		Muestra en ventana de depuración (puerto serie) info de las variables
+	
